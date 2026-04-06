@@ -1,0 +1,47 @@
+body {
+  background-color: cornsilk;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: grey;
+  margin-bottom: 30px;
+}
+
+.blog {
+  background-color: whitesmoke;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 5);
+}
+
+.blog .title {
+  margin-top: 0;
+}
+
+.blog a {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.blog a:hover {
+  text-decoration: underline;
+}
+
+.blog h4,
+.blog h5 {
+  color: #555;
+  margin: 5px 0;
+}
+
+hr {
+  display: none;
+}

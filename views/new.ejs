@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Blog Pages</title>
+    <link rel="stylesheet" href="/style/style.css" />
+  </head>
+  <body>
+    <h2>Blogger Bhoj</h2>
+    <hr />
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <h3>Write your own blog</h3>
+    <form method="post" action="/blogs/new">
+      <input
+        type="text"
+        placeholder="Enter your title here..."
+        name="blog[title]"
+        class="textarea"
+      />
+      <br /><br />
+      <input
+        type="text"
+        placeholder="Enter your name here..."
+        name="blog[author]"
+        class="textarea"
+      /><br /><br />
+      <textarea
+        name="blog[content]"
+        id="content-box"
+        placeholder="Write your Idea here..."
+      ></textarea
+      ><br /><br />
+      <input
+        type="text"
+        name="blog[Image]"
+        id="img"
+        placeholder="Enter your imgUrl/link"
+      /><br /><br />
+      <input
+        type="text"
+        placeholder="Enter Tags here..."
+        class="textarea"
+        name="blog[Tags]"
+      /><br /><br />
+      <button>Submit</button>
+    </form>
+  </body>
+</html>
