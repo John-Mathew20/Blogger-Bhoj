@@ -31,28 +31,36 @@ main()
 app.get("/", (req, res) => {
   res.send("server working well");
 });
+
+//show main page
 app.get("/blogs", async (req, res) => {
   const blogs = await Blog.find({});
   console.log(blogs);
   res.render("index.ejs", { blogs });
 });
 
+//show new pages
 app.get("/blogs/new", (req, res) => {
   res.render("new.ejs");
 });
 
+//show
+
+//blog in detail
 app.get("/blogs/:id", async (req, res) => {
   let { id } = req.params;
   const blogs = await Blog.findById(id);
   res.render("show.ejs", { blogs });
 });
 
+//creates new blog
 app.post("/blogs/new", async (req, res) => {
   let newBlog = new Blog(req.body.blog);
   await newBlog.save();
   res.redirect("/blogs");
 });
 
+//sample entry
 app.get("/testBlog", async (req, res) => {
   let sampleBlog = new Blog({
     title: "My First Blog",
