@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BloggerBhoj</title>
+    <link rel="stylesheet" href="/style/style.css" />
     <link rel="stylesheet" href="/style/style2.css" />
   </head>
   <body>
     <div class="blogs">
       <h2 class="title"><%= blogs.title %></h2>
-      <h4 class="author"><%= blogs.author %></h4>
+      <h4 class="author">@<%= blogs.author %></h4>
       <hr />
       <div class="content-wrapper">
         <p class="content"><%=blogs.content%></p>

@@ -1,49 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Blog Pages</title>
-    <link rel="stylesheet" href="/style/style.css" />
+    <link rel="stylesheet" href="/style/style3.css" />
   </head>
   <body>
-    <h2>Blogger Bhoj</h2>
-    <hr />
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <h3>Write your own blog</h3>
-    <form method="post" action="/blogs/new">
-      <input
-        type="text"
-        placeholder="Enter your title here..."
-        name="blog[title]"
-        class="textarea"
-      />
-      <br /><br />
-      <input
-        type="text"
-        placeholder="Enter your name here..."
-        name="blog[author]"
-        class="textarea"
-      /><br /><br />
-      <textarea
-        name="blog[content]"
-        id="content-box"
-        placeholder="Write your Idea here..."
-      ></textarea
-      ><br /><br />
-      <input
-        type="text"
-        name="blog[Image]"
-        id="img"
-        placeholder="Enter your imgUrl/link"
-      /><br /><br />
-      <input
-        type="text"
-        placeholder="Enter Tags here..."
-        class="textarea"
-        name="blog[Tags]"
-      /><br /><br />
-      <button>Submit</button>
-    </form>
+    <div class="container">
+      <h2>Blogger Bhoj</h2>
+      <hr />
+      <h3>Write your own blog</h3>
+      <form method="post" action="/blogs/new">
+        <input
+          type="text"
+          placeholder="Enter your title here..."
+          name="blog[title]"
+          class="textarea"
+        />
+        <input
+          type="text"
+          placeholder="Enter your name here..."
+          name="blog[author]"
+          class="textarea"
+        />
+        <textarea
+          name="blog[content]"
+          id="content-box"
+          class="textarea"
+          placeholder="Write your Idea here..."
+          rows="10"
+        ></textarea>
+        <input
+          type="text"
+          name="blog[Image]"
+          id="img"
+          class="textarea"
+          placeholder="Enter your imgUrl/link"
+        />
+        <input
+          type="text"
+          placeholder="Enter Tags here..."
+          class="textarea"
+          name="blog[Tags]"
+        />
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
   </body>
 </html>
