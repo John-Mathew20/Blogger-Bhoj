@@ -5,6 +5,7 @@ const path = require("path");
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
 const Blog = require("./modules/blog.js");
+const { BlockList } = require("net");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
@@ -44,7 +45,18 @@ app.get("/blogs/new", (req, res) => {
   res.render("new.ejs");
 });
 
-//show
+//show page to edit
+app.patch("/blogs/:id", async (req, res) => {
+  let { id } = req.params;
+  await Blog.findByIdAndUpdate(id, { ...req.body.blog });
+  res.redirect("/blogs");
+});
+
+app.get("/blog/:id/edit", async (req, res) => {
+  let { id } = req.params;
+  const blogs = await Blog.findById(id);
+  res.render("edit.ejs", { blogs });
+});
 
 //blog in detail
 app.get("/blogs/:id", async (req, res) => {

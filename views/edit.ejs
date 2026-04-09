@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit your Blog...</title>
+    <link rel="stylesheet" href="/style/style3.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Blogger Bhoj</h2>
+      <hr />
+      <h3>Edit your blog</h3>
+      <br />
+      <h3>@<%= blogs.author%></h3>
+      <form action="/blogs/<%=blogs.id%>?_method=patch" method="post">
+        <textarea
+          name="blog[title]"
+          placeholder="<%= blogs.title %>"
+          class="textarea"
+        ></textarea>
+        <textarea
+          name="blog[content]"
+          placeholder="<%= blogs.content %>"
+          class="textarea"
+        ></textarea>
+        <button class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
