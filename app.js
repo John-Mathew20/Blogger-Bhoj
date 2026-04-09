@@ -58,6 +58,12 @@ app.get("/blog/:id/edit", async (req, res) => {
   res.render("edit.ejs", { blogs });
 });
 
+app.delete("/blogs/:id", async (req, res) => {
+  let { id } = req.params;
+  await Blog.findByIdAndDelete(id);
+  res.redirect("/blogs");
+});
+
 //blog in detail
 app.get("/blogs/:id", async (req, res) => {
   let { id } = req.params;

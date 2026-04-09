@@ -6,6 +6,7 @@
     <title>BloggerBhoj</title>
     <link rel="stylesheet" href="/style/style.css" />
     <link rel="stylesheet" href="/style/style2.css" />
+    <link rel="stylesheet" href="/style/style3.css" />
   </head>
   <body>
     <div class="blogs">
@@ -16,7 +17,12 @@
         <p class="content"><%=blogs.content%></p>
         <img src="<%= blogs.Image%>" class="img" />
       </div>
-      <a href="/blog/<%=blogs.id%>/edit"><button>edit</button></a>
+      <a href="/blog/<%=blogs.id%>/edit"
+        ><button class="submit-btn">edit</button></a
+      >
+      <a href="/blog/<%=blogs.id%>/delete"
+        ><button class="submit-btn">Delete</button></a
+      >
     </div>
   </body>
 </html>
