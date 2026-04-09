@@ -18,11 +18,13 @@
         <img src="<%= blogs.Image%>" class="img" />
       </div>
       <a href="/blog/<%=blogs.id%>/edit"
-        ><button class="submit-btn">edit</button></a
+        ><button class="submit-btn">Edit it</button></a
       >
-      <a href="/blog/<%=blogs.id%>/delete"
-        ><button class="submit-btn">Delete</button></a
-      >
+      <form action="/blogs/<%=blogs._id%>?_method=delete" method="post">
+        <a href="#">
+          <button class="submit-btn">Delete</button>
+        </a>
+      </form>
     </div>
   </body>
 </html>
