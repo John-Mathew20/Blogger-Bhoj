@@ -52,12 +52,14 @@ app.patch("/blogs/:id", async (req, res) => {
   res.redirect("/blogs");
 });
 
+//provides edit page
 app.get("/blog/:id/edit", async (req, res) => {
   let { id } = req.params;
   const blogs = await Blog.findById(id);
   res.render("edit.ejs", { blogs });
 });
 
+//deletes blogs
 app.delete("/blogs/:id", async (req, res) => {
   let { id } = req.params;
   await Blog.findByIdAndDelete(id);
@@ -93,7 +95,8 @@ app.get("/testBlog", async (req, res) => {
   res.send(`<img src = "${img}">`);
   console.log("he");
 });
-console.log("hello");
+
+//start
 app.listen(port, () => {
   console.log(`app is running on port ${port}`);
 });
